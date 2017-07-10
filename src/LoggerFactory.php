@@ -11,15 +11,15 @@ class LoggerFactory
      * Create instance of Monolog\Logger
      *
      * @param string $file  Path to log file
-     * @param string $name  Name of logger
      * @param string $level Log level
+     * @param string $name  Name of logger
      *
      * @return Logger
      */
     static public function create(
         $file,
-        $name = 'logger',
-        $level = 'DEBUG'
+        $level = 'DEBUG',
+        $name = 'logger'
     ) {
 
         $logger = new Logger($name);

@@ -28,7 +28,7 @@ class LoggerFactoryTest extends TestCase
         }
     }
 
-    public function testCanWrite()
+    public function testCanSetFile()
     {
         $logger = LoggerFactory::create(
             $this->file
@@ -39,7 +39,7 @@ class LoggerFactoryTest extends TestCase
             $logger
         );
 
-        $logger->debug('Test message');
+        $logger->debug('Debug message');
 
         $this->assertFileExists(
             $this->file
@@ -52,7 +52,6 @@ class LoggerFactoryTest extends TestCase
 
         $logger = LoggerFactory::create(
             $this->file,
-            'logger',
             'ERROR'
         );
 
@@ -79,8 +78,11 @@ class LoggerFactoryTest extends TestCase
 
         $name = 'mySpecialNameThatWillMatched';
 
+        $level = 'DEBUG';
+
         $logger = LoggerFactory::create(
             $this->file,
+            $level,
             $name
         );
 

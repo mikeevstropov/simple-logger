@@ -19,8 +19,8 @@ use Mikeevstropov\SimpleLogger\LoggerFactory;
 
 $logger = LoggerFactory::create(
     'path/to/file.log',
-    'log-name',
-    'DEBUG'
+    'DEBUG',
+    'log-name'
 );
 
 // add records to the log
@@ -38,8 +38,8 @@ $logger->error('Error message');
   
   Arguments:
   - `file` _(string)_ - path to the log file
-  - `name` _(string)_ - name of logger or "logger" as default
   - `level` _(string)_ - log level or "DEBUG" as default
+  - `name` _(string)_ - name of logger or "logger" as default
   
   Returns:
   - `Monolog\Logger`
