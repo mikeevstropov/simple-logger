@@ -1,0 +1,33 @@
+{
+    "name": "mikeevstropov/simple-logger",
+    "description": "Simple way to create instance of Monolog\\Logger",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mike Evstropov",
+            "email": "mike.evstropov@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "monolog/monolog": "~1.0"
+    },
+    "require-dev": {
+        "php": ">=5.6",
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mikeevstropov\\SimpleLogger\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mikeevstropov\\SimpleLogger\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit tests --bootstrap vendor/autoload.php"
+    }
+}
